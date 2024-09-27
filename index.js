@@ -1,14 +1,1 @@
-window.screenOrientation = "sensor_landscape", 
-//loadLib("./libs/laya.core.js"),
-//  loadLib("./libs/laya.ani.js"),
-//   loadLib("./libs/laya.ui.js"),
-//    loadLib("./libs/laya.d3.js"), 
-//    loadLib("./libs/laya.physics3D.js"),
-
-loadLib("https://h5gamessdk.yyggames.com/sdk/laya/2.7.3/laya.core.js"),
-loadLib("https://h5gamessdk.yyggames.com/sdk/laya/2.7.3/laya.ani.js"),
-loadLib("https://h5gamessdk.yyggames.com/sdk/laya/2.7.3/laya.ui.js"),
-loadLib("https://h5gamessdk.yyggames.com/sdk/laya/2.7.3/laya.d3.js"),
-loadLib("https://h5gamessdk.yyggames.com/sdk/laya/2.7.3/laya.physics3D.js"),
-   //loadLib("./AdSdk/Sdk.js"),
-    loadLib("./js/main.js");                                                                                                 
+window.screenOrientation="sensor_landscape",loadLib("libs/min/laya.core.min.js"),loadLib("libs/min/laya.ui.min.js"),loadLib("libs/min/laya.d3.min.js"),loadLib("libs/min/W.min.js"),loadLib("libs/min/ad.min.js"),loadLib("libs/min/fairygui.min.js"),loadLib("libs/min/laya.physics3D.min.js"),loadLib("libs/min/utils.min.js"),loadLib("js/bundle.js");
