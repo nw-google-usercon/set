@@ -1,4 +1,4 @@
-var loadModules = function (modules, urlPrefix, doneCallback) { // eslint-disable-line no-unused-vars
+var loadModules = function(modules, urlPrefix, doneCallback) { // eslint-disable-line no-unused-vars
 
     if (typeof modules === "undefined" || modules.length === 0) {
         // caller may depend on callback behaviour being async
@@ -11,7 +11,7 @@ var loadModules = function (modules, urlPrefix, doneCallback) { // eslint-disabl
             }
         };
 
-        modules.forEach(function (m) {
+        modules.forEach(function(m) {
             pc.WasmModule.setConfig(m.moduleName, {
                 glueUrl: urlPrefix + m.glueUrl,
                 wasmUrl: urlPrefix + m.wasmUrl,
@@ -31,11 +31,15 @@ var loadModules = function (modules, urlPrefix, doneCallback) { // eslint-disabl
                         moduleLoaded();
                     } else {
                         // 1.62 and earlier
-                        pc.WasmModule.getInstance(m.moduleName, () => { moduleLoaded(); });
+                        pc.WasmModule.getInstance(m.moduleName, () => {
+                            moduleLoaded();
+                        });
                     }
                 } else {
                     // load remaining modules in global scope
-                    pc.WasmModule.getInstance(m.moduleName, () => { moduleLoaded(); });
+                    pc.WasmModule.getInstance(m.moduleName, () => {
+                        moduleLoaded();
+                    });
                 }
             } else {
                 moduleLoaded();
